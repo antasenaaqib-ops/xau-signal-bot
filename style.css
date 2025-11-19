@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 24px;
+  background: #020617;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #22c55e;
+  color: #022c22;
+  transition: transform 0.05s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+button:hover {
+  background: #16a34a;
+  box-shadow: 0 0 0 1px #16a34a, 0 10px 20px rgba(22, 163, 74, 0.4);
+  transform: translateY(-1px);
+}
+
+.signal-card {
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #020617;
+  border: 1px solid #1f2937;
+  margin-bottom: 24px;
+}
+
+.signal-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.signal-card p {
+  margin: 4px 0;
+}
+
+.signal-card .meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.levels {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #1f2937;
+  font-size: 0.9rem;
+}
+
+.levels p {
+  margin: 2px 0;
+}
+
+.signal-buy {
+  border-color: #16a34a;
+}
+
+.signal-sell {
+  border-color: #dc2626;
+}
+
+.signal-wait {
+  border-color: #1f2937;
+}
+
+
+.history {
+  border-top: 1px solid #1f2937;
+  padding-top: 16px;
+}
+
+.history h3 {
+  margin-top: 0;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#history-list li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #1f2937;
+}
+
+footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+.manual-inputs {
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #020617;
+  border: 1px solid #1f2937;
+  margin-bottom: 24px;
+}
+
+.manual-inputs h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.manual-inputs .field {
+  flex: 1;
+  min-width: 150px;
+}
+
+.manual-inputs input {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}

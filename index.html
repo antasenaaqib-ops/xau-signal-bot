@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>XAU Signal Bot - Sederhana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>XAU Signal Bot</h1>
+      <p>Aplikasi demo web signal XAU/USD</p>
+    </header>
+
+        <section class="price">
+      <h2>Harga XAUUSD</h2>
+      <p id="price-line">Belum ada data harga.</p>
+    </section>
+
+        <section class="manual-inputs">
+      <h2>Level Harga Manual</h2>
+      <div class="field-row">
+        <div class="field">
+          <label for="price-now">Harga sekarang</label>
+          <input id="price-now" type="number" step="0.01" placeholder="kosongkan untuk pakai harga API" />
+        </div>
+
+        <div class="field">
+          <label for="support">Support</label>
+          <input id="support" type="number" step="0.01" placeholder="mis: 2390.00" />
+        </div>
+
+        <div class="field">
+          <label for="resistance">Resistance</label>
+          <input id="resistance" type="number" step="0.01" placeholder="mis: 2410.00" />
+        </div>
+      </div>
+      <p class="hint">
+        Kamu boleh isi dua level harga (bawah & atas), urutannya bebas. Bot akan menentukan mana yang jadi support dan resistance. Kalau "Harga sekarang" dikosongkan, bot pakai harga mid dari API.
+        </p>    
+      </p>
+    </section>
+
+
+    <section class="controls">
+      <div class="field">
+        <label for="timeframe">Timeframe</label>
+        <select id="timeframe">
+          <option value="M15">M15</option>
+          <option value="H1">H1</option>
+          <option value="H4">H4</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="mode">Mode Signal</label>
+        <select id="mode">
+          <option value="conservative">Conservative</option>
+          <option value="moderate">Moderate</option>
+          <option value="aggressive">Aggressive</option>
+        </select>
+      </div>
+
+      <button id="btn-generate">Generate Signal</button>
+    </section>
+
+    <section class="signal-card" id="signal-card">
+      <h2 id="signal-label">Belum ada signal</h2>
+      <p id="signal-detail">Klik tombol "Generate Signal" untuk mulai.</p>
+
+      <!-- 🔹 Tambahan: rekomendasi harga -->
+      <div class="levels">
+        <p id="entry-line">Entry: -</p>
+        <p id="sl-line">SL: -</p>
+        <p id="tp1-line">TP1: -</p>
+        <p id="tp2-line">TP2: -</p>
+      </div>
+
+      <p class="meta" id="signal-meta"></p>
+    </section>
+
+
+    <section class="history">
+      <h3>History Signal</h3>
+      <ul id="history-list"></ul>
+    </section>
+
+    <footer>
+      <small>Demo XAU Signal Bot - versi lokal (dummy data)</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
